@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container">
+    <br>
+    <h2>Results:</h2>
+    <br>
+    {% if note %}
+    <p class="warning">{{ note }}</p>
+    {% endif %}
+    <br>
+    <div class="table-responsive">
+        {{ data | safe }}
+    </div>
+</div>
+
+{% endblock %}
