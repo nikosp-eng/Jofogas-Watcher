@@ -74,7 +74,7 @@ def get_listed_dates(full_content):
                         'több, mint egy hónapja' else x for x in listed_dates]
         listed_dates = [s.split('.')[0] for s in listed_dates]
         listed_dates = [date.replace('márc', 'Mar').replace(
-            'ápr', 'Apr') for date in listed_dates]
+            'ápr', 'Apr').replace('máj', 'May') for date in listed_dates]
     except AttributeError:
         listed_dates = ""
     return listed_dates
